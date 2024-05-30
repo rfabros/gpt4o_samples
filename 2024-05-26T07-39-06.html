@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees by Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section {
+            border: 1px solid #000;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Employees by Department</h1>
+
+    <!-- Region Section -->
+    <div class="section">
+        <h2>Region</h2>
+        <div class="form-group">
+            <label for="regionID">ID:</label>
+            <input type="text" id="regionID" name="regionID" value="1">
+        </div>
+        <div class="form-group">
+            <label for="regionName">Name:</label>
+            <input type="text" id="regionName" name="regionName" value="North America">
+        </div>
+    </div>
+
+    <!-- Departments Section -->
+    <div class="section">
+        <h2>Departments</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Finance</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>Sales</td>
+            </tr>
+            <tr>
+                <td>41</td>
+                <td>Operations</td>
+            </tr>
+            <tr>
+                <td>50</td>
+                <td>Administration</td>
+            </tr>
+            <tr>
+                <td>51</td>
+                <td>Legal</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Order Records By Section -->
+    <div class="section">
+        <h2>Order Records By</h2>
+        <div class="form-group">
+            <label for="orderRecords">Select:</label>
+            <select id="orderRecords" name="orderRecords">
+                <option value="id">ID Number</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="notifyHR">Notify HR?</label>
+            <input type="checkbox" id="notifyHR" name="notifyHR">
+        </div>
+        <button type="button">Add Employee</button>
+    </div>
+
+    <!-- Employees Section -->
+    <div class="section">
+        <h2>Employees</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Title</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ngao</td>
+                <td>LaDoris</td>
+                <td>VP, Operations</td>
+                <td>1450</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Urquhart</td>
+                <td>Molly</td>
+                <td>Warehouse Manager</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Maduro</td>
+                <td>Elena</td>
+                <td>Stock Clerk</td>
+                <td>1400</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Smith</td>
+                <td>George</td>
+                <td>Stock Clerk</td>
+                <td>900</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Conejo</td>
+                <td>Pia Maria</td>
+                <td>Stock Clerk</td>
+                <td>700</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

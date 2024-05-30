@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees by Department Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .header {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .actions {
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header section">
+            <h1>Employees by Department</h1>
+            <div>
+                <button>Previous</button>
+                <button>Next</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Region</h2>
+            <div class="form-group">
+                <label for="region-id">ID</label>
+                <input type="number" id="region-id">
+            </div>
+            <div class="form-group">
+                <label for="region-name">Name</label>
+                <input type="text" id="region-name">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Departments</h2>
+            <div class="form-group">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>Finance</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Sales</td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>Operations</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>Administration</td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>Legal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Order Records By</h2>
+            <select id="order-by">
+                <option value="id">ID Number</option>
+                <option value="name">Name</option>
+            </select>
+
+            <div class="form-group">
+                <input type="checkbox" id="notify-hr">
+                <label for="notify-hr">Notify HR?</label>
+            </div>
+
+            <div class="actions">
+                <button>Add Employee</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Employees</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>Title</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>Ngao</td>
+                        <td>LaDoris</td>
+                        <td>VP, Operations</td>
+                        <td>1450</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Urquhart</td>
+                        <td>Molly</td>
+                        <td>Warehouse Manager</td>
+                        <td>1400</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Maduro</td>
+                        <td>Elena</td>
+                        <td>Stock Clerk</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Smith</td>
+                        <td>George</td>
+                        <td>Stock Clerk</td>
+                        <td>950</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Conejo</td>
+                        <td>Pia Maria</td>
+                        <td>Stock Clerk</td>
+                        <td>700</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
